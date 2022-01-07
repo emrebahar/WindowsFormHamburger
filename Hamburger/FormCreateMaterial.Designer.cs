@@ -1,7 +1,7 @@
 ﻿
 namespace Hamburger
 {
-    partial class Form5
+    partial class FormCreateMaterial
     {
         /// <summary>
         /// Required designer variable.

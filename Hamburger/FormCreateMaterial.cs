@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hamburger
 {
-    public partial class Form5 : Form
+    public partial class FormCreateMaterial : Form
     {
-        public Form5()
+        public FormCreateMaterial()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Hamburger
             Materials materials = new Materials();
             materials.MaterialName = txtMaterialsName.Text;
             materials.MaterialPrice = (decimal)numericUpDown1.Value;
-            Form2.materials.Add(materials);
+            FormCreateOrders.materials.Add(materials);
             this.Hide();
         }
     }

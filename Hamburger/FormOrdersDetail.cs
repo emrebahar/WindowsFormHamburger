@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hamburger
 {
-    public partial class Form3 : Form
+    public partial class FormOrdersDetail : Form
     {
-        public Form3()
+        public FormOrdersDetail()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace Hamburger
         decimal totalMaterialsPrice = 0;
         private void Form3_Load(object sender, EventArgs e)
         {
-            foreach (var order in Form2.Orders)
+            foreach (var order in FormCreateOrders.Orders)
             {
                 listBox1.Items.Add(order);
                 ordersQuantity += order.Quantity;
@@ -33,7 +33,7 @@ namespace Hamburger
             }
             lblMaterial.Text = totalMaterialsPrice.ToString("C2");
             lblOrderQuantity.Text = ordersQuantity.ToString();
-            lblTotalOrderCount.Text = Form2.Orders.Count.ToString();
+            lblTotalOrderCount.Text = FormCreateOrders.Orders.Count.ToString();
             lblTotalCiro.Text = totalCiro.ToString("C2");
         }
     }

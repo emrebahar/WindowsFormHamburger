@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hamburger
 {
-    public partial class Form4 : Form
+    public partial class FormCreateMenu : Form
     {
-        public Form4()
+        public FormCreateMenu()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Hamburger
             Menus menus = new Menus();
             menus.MenuName = txtMenuName.Text;
             menus.MenuPrice = (decimal)numericUpDown1.Value;
-            Form2.menus.Add(menus);
+            FormCreateOrders.menus.Add(menus);
             this.Hide();
         }
     }

@@ -10,34 +10,34 @@ using System.Windows.Forms;
 
 namespace Hamburger
 {
-    public partial class Form1 : Form
+    public partial class FormHome : Form
     {
-        public Form1()
+        public FormHome()
         {
             InitializeComponent();
         }
         
         private void siparişOluşturToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            FormCreateOrders frm = new FormCreateOrders();
             frmShow(frm);
         }
 
         private void siparişBilgileriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 frm = new Form3();
+            FormOrdersDetail frm = new FormOrdersDetail();
             frmShow(frm);
         }
 
         private void menuBilgileriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form4 frm = new Form4();
+            FormCreateMenu frm = new FormCreateMenu();
             frmShow(frm);
         }
 
         private void extraMalzemeBilgileriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 frm = new Form5();
+            FormCreateMaterial frm = new FormCreateMaterial();
             frmShow(frm);
         }
 

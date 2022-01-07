@@ -1,7 +1,7 @@
 ﻿
 namespace Hamburger
 {
-    partial class Form4
+    partial class FormCreateMenu
     {
         /// <summary>
         /// Required designer variable.
