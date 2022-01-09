@@ -28,7 +28,7 @@ namespace Hamburger
             MenuPrice = 20.0m
             }
          };
-        public static List<Orders> Orders = new List<Orders>();
+        public static List<Orders> OrderList = new List<Orders>();
         public static List<Materials> materials = new List<Materials>()
         {
             new Materials()
@@ -54,7 +54,9 @@ namespace Hamburger
             foreach (var item in currentOrders)
             {
                 listBox1.Items.Add(item.ToString());
+                totalPrice += item.TotalPrice;
             }
+            lblTotalPrice.Text = totalPrice.ToString("C2");
             #region Menu
 
             cmbMenu.DisplayMember = "MenuName";
@@ -93,12 +95,17 @@ namespace Hamburger
             }
 
             #endregion
+            if (listBox1.Items.Count == 0)
+            {
+                btnOrderComplete.Visible = false;
+            }
         }
 
         private void btnSiparisEkle_Click(object sender, EventArgs e)
         {
+            btnOrderComplete.Visible = true;
             Orders orders = new Orders();
-            orders.Menus =(Menus)cmbMenu.SelectedItem;
+            orders.Menus = (Menus)cmbMenu.SelectedItem;
 
             foreach (RadioButton item in flowLayoutPanel2.Controls)
             {
@@ -122,10 +129,36 @@ namespace Hamburger
             totalPrice += orders.TotalPrice;
             listBox1.Items.Add(orders.ToString());
             lblTotalPrice.Text = totalPrice.ToString("C2");
-            Orders.Add(orders);
             currentOrders.Add(orders);
-
+            //Orders.Add(orders);
             FormClear();
+        }
+        private void btnOrderComplete_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count > 0)
+            {
+                var result = MessageBox.Show(@"Siparişi Onaylıyor musunuz?", @"Sipariş Onayı",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result.Equals(DialogResult.Yes))
+                {
+                    foreach (var order in currentOrders)
+                    {
+                        OrderList.Add(order);
+                    }
+                    totalPrice = 0;
+                    lblTotalPrice.Text = totalPrice.ToString("C2");
+                    currentOrders.Clear();
+                    listBox1.Items.Clear();
+                    FormClear();
+                    MessageBox.Show("Siparişiniz oluşturuldu.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Sipariş Seçimi yapınız!");
+            }
         }
         void FormClear()
         {

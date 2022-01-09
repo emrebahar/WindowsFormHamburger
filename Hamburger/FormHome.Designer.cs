@@ -47,7 +47,7 @@ namespace Hamburger
             this.ürünYönetimiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1284, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1284, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,14 +63,14 @@ namespace Hamburger
             // siparişOluşturToolStripMenuItem
             // 
             this.siparişOluşturToolStripMenuItem.Name = "siparişOluşturToolStripMenuItem";
-            this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.siparişOluşturToolStripMenuItem.Text = "Sipariş Oluştur";
             this.siparişOluşturToolStripMenuItem.Click += new System.EventHandler(this.siparişOluşturToolStripMenuItem_Click);
             // 
             // siparişBilgileriToolStripMenuItem
             // 
             this.siparişBilgileriToolStripMenuItem.Name = "siparişBilgileriToolStripMenuItem";
-            this.siparişBilgileriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.siparişBilgileriToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.siparişBilgileriToolStripMenuItem.Text = "Sipariş Bilgileri";
             this.siparişBilgileriToolStripMenuItem.Click += new System.EventHandler(this.siparişBilgileriToolStripMenuItem_Click);
             // 
@@ -97,7 +97,7 @@ namespace Hamburger
             this.extraMalzemeBilgileriToolStripMenuItem.Text = "Extra Malzeme Bilgileri";
             this.extraMalzemeBilgileriToolStripMenuItem.Click += new System.EventHandler(this.extraMalzemeBilgileriToolStripMenuItem_Click);
             // 
-            // Form1
+            // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,8 +105,10 @@ namespace Hamburger
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "BaharBurger";
+            this.Name = "FormHome";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BaharBurgers";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -21,7 +21,7 @@ namespace Hamburger
         decimal totalMaterialsPrice = 0;
         private void Form3_Load(object sender, EventArgs e)
         {
-            foreach (var order in FormCreateOrders.Orders)
+            foreach (var order in FormCreateOrders.OrderList)
             {
                 listBox1.Items.Add(order);
                 ordersQuantity += order.Quantity;
@@ -33,7 +33,7 @@ namespace Hamburger
             }
             lblMaterial.Text = totalMaterialsPrice.ToString("C2");
             lblOrderQuantity.Text = ordersQuantity.ToString();
-            lblTotalOrderCount.Text = FormCreateOrders.Orders.Count.ToString();
+            lblTotalOrderCount.Text = FormCreateOrders.OrderList.Count.ToString();
             lblTotalCiro.Text = totalCiro.ToString("C2");
         }
     }

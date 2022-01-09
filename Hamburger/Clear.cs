@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hamburger
 {
-    public class Menus
+    public class Clear
     {
-        public string MenuName { get; set; }
-        public decimal MenuPrice { get; set; }
-
-        
-
+       void FormClear()
+        {
+        }
     }
 }
